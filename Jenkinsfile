@@ -1,9 +1,22 @@
 pipeline {
     agent any
 
+    environment {
+    PATH = "C:\\Users\\piyus\\AppData\\Local\\Programs\\Python\\Python310;C:\\Users\\piyus\\AppData\\Local\\Programs\\Python\\Python310\\Scripts;${env.PATH}"
+}
+
+
     options {
         // The Checkout stage below performs the repository checkout explicitly.
         skipDefaultCheckout(true)
+    }
+
+    stages {
+        stage('Run Python') {
+            steps {
+                bat 'python --version'
+            }
+        }
     }
 
     stages {
