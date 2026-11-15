@@ -4,8 +4,7 @@ pipeline {
     environment {
         // Make this Python installation visible to the Jenkins service.
         // Change this path if Python is installed somewhere else.
-        PATH+PYTHON = 'C:\\Users\\piyus\\AppData\\Local\\Programs\\Python\\Python310'
-        PATH+PYTHON_SCRIPTS = 'C:\\Users\\piyus\\AppData\\Local\\Programs\\Python\\Python310\\Scripts'
+        PATH = "C:\\Users\\piyus\\AppData\\Local\\Programs\\Python\\Python310;C:\\Users\\piyus\\AppData\\Local\\Programs\\Python\\Python310\\Scripts;${env.PATH}"
     }
 
     options {
